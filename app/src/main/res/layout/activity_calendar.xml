@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <include
+        layout="@layout/view_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_below="@+id/tb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:fillViewport="true"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/calLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:gravity="center"
+                    android:text="CALENDAR"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#9E28B3"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    />
+
+
+                <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="370dp"
+
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_below="@+id/calLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity= "center"
+                    android:id="@+id/diaryTextView" android:layout_marginTop="0dp"
+
+                    android:layout_marginEnd="8dp" android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginStart="8dp" android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/calRecycleView"
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/contextEditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginEnd="8dp"
+                        android:layout_marginRight="8dp"
+                        android:ems="20"
+                        android:hint="일정을 입력하세요"
+                        android:inputType="textMultiLine"
+                        android:visibility="invisible" />
+
+                    <Button
+                        android:id="@+id/save_Btn"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/bin_blue"
+                        android:textColor="#ffffff"
+                        android:gravity="center"
+                        android:text="저장"
+                        android:visibility="invisible" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView></RelativeLayout>

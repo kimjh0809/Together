@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.login">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+
+
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label=""
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="http"
+                    android:host="google.com" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.MainActivity">
+        </activity>
+        <activity android:name=".activity.SignUpActivity">
+        </activity>
+        <activity android:name=".activity.RoomChatStartActivity">
+        </activity>
+        <activity android:name=".activity.ChatActivity">
+        </activity>
+        <activity android:name=".activity.LocationActivity">
+        </activity>
+        <activity android:name=".activity.RoomHomeActivity">
+        </activity>
+        <activity android:name=".activity.PasswordResetActivity">
+        </activity>
+        <activity android:name=".activity.GalleryActivity">
+        </activity>
+        <activity android:name=".activity.CameraActivity">
+        </activity>
+        <activity android:name=".activity.MemberInitActivity">
+        </activity>
+        <activity android:name=".activity.MyPageActivity">
+        </activity>
+        <activity android:name=".activity.WritePostActivity">
+        </activity>
+        <activity android:name=".activity.StoryActivity">
+        </activity>
+        <activity android:name=".activity.PostActivity">
+        </activity>
+        <activity android:name=".activity.CalendarActivity">
+
+        </activity>
+        <activity android:name=".activity.RoomActivity">
+
+        </activity>
+
+
+
+
+
+        <meta-data android:name="com.kakao.sdk.AppKey" android:value="e1a16b083d8ca9d4d7648de7aae0ba06"/>
+
+        <provider
+            android:authorities="com.example.login"
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+
+        </provider>
+
+
+
+
+
+    </application>
+
+
+
+</manifest>
